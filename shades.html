@@ -9,21 +9,35 @@
 <body>
     <table>
         <tr>
-                <td><button style="padding: 50px 50px;  margin-left: 450px; background-color:  #b30000">shade1</button></td>
-                <td><button style="padding: 50px 50px; background-color: #cc0000;">shade2</button></td>
-                <td><button style="padding: 50px 50px; background-color: #e60000;">shade3</button></td>
+                <td id="1"><button style="padding: 50px 50px;  margin-left: 450px;">shade1</button></td>
+                <td id="2"><button style="padding: 50px 50px;">shade2</button></td>
+                <td id="3"><button style="padding: 50px 50px;">shade3</button></td>
         </tr>
         <tr>
-            <td><button style="padding: 50px 50px; margin-left: 450px; background-color: #0000e6;">shade4</button></td>
-            <td><button style="padding: 50px 50px; background-color: #4d4dff;">shade5</button></td>
-            <td><button style="padding: 50px 50px; background-color: #8080ff;">shade6</button></td>
+            <td id="4"><button style="padding: 50px 50px; margin-left: 450px;">shade4</button></td>
+            <td id="5"><button style="padding: 50px 50px;">shade5</button></td>
+            <td id="6"><button style="padding: 50px 50px;">shade6</button></td>
         </tr>
         <tr>
-            <td><button style="padding: 50px 50px; margin-left: 450px; background-color: #181818;">shade7</button></td>
-            <td><button style="padding: 50px 50px; background-color: #383838;">shade8</button></td>
-            <td><button style="padding: 50px 50px; background-color: #505050;">shade9</button></td>
+            <td id="7"><button style="padding: 50px 50px; margin-left: 450px;">shade7</button></td>
+            <td id="8"><button style="padding: 50px 50px;">shade8</button></td>
+            <td id="9"><button style="padding: 50px 50px;">shade9</button></td>
         </tr>
     </table>
+    <script>
+        //read hex code from url
+        var hexCode = window.location.search.substring(7);
+        
+        //make for loop to get different shades
+        for (i=1; i<=9; i++){
+        var value = parseInt(hexCode, 16); 
+                console.log(value);
+            
+    
+    
+        }
+        
+    </script>
 
 </body>
 </html>
