@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shades</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <table>
-        <tr>
-                <td><button id="1" style="padding: 50px 50px;  margin-left: 450px;">shade1</button></td>
-                <td><button id="2" style="padding: 50px 50px;">shade2</button></td>
-                <td><button id="3"style="padding: 50px 50px;">shade3</button></td>
-        </tr>
-        <tr>
-            <td><button  id="4" style="padding: 50px 50px; margin-left: 450px;">shade4</button></td>
-            <td><button  id="5" style="padding: 50px 50px;">shade5</button></td>
-            <td><button  id="6" style="padding: 50px 50px;">shade6</button></td>
-        </tr>
-        <tr>
-            <td><button  id="7" style="padding: 50px 50px; margin-left: 450px;">shade7</button></td>
-            <td><button  id="8" style="padding: 50px 50px;">shade8</button></td>
-            <td><button  id="9" style="padding: 50px 50px;">shade9</button></td>
-        </tr>
-        
+      <tr>
+        <td>
+          <button id="1" style="padding: 50px 50px; margin-left: 450px">
+            shade1
+          </button>
+        </td>
+        <td><button id="2" style="padding: 50px 50px">shade2</button></td>
+        <td><button id="3" style="padding: 50px 50px">shade3</button></td>
+      </tr>
+      <tr>
+        <td>
+          <button id="4" style="padding: 50px 50px; margin-left: 450px">
+            shade4
+          </button>
+        </td>
+        <td><button id="5" style="padding: 50px 50px">shade5</button></td>
+        <td><button id="6" style="padding: 50px 50px">shade6</button></td>
+      </tr>
+      <tr>
+        <td>
+          <button id="7" style="padding: 50px 50px; margin-left: 450px">
+            shade7
+          </button>
+        </td>
+        <td><button id="8" style="padding: 50px 50px">shade8</button></td>
+        <td><button id="9" style="padding: 50px 50px">shade9</button></td>
+      </tr>
     </table>
     <script>
-        //read hex code from url
-        var hexCode = window.location.search.substr(7);
-        
-        //make for loop to get different shades
-        for (var i = 1; i<=9; i++){
-            
-        var value = parseInt(hexCode, 16) + (i*100); 
-        
-        value = '#' + value.toString(16);
-        
+      //read hex code from url
+      var hexCode = window.location.search.substr(7);
+
+      //make for loop to get different shades
+      for (var i = 1; i <= 9; i++) {
+        var value = parseInt(hexCode, 16) + i * 100;
+
+        value = "#" + value.toString(16);
+
         document.getElementById(i).style.backgroundColor = value;
-            document.getElementById(i).onclick = zeel;
-        }   
-    function zeel(event){
-        document.body.style.backgroundColor = event.target.style.backgroundColor;
-    }
+        document.getElementById(i).onclick = zeel;
+      }
+      function zeel(event) {
+        document.body.style.backgroundColor =
+          event.target.style.backgroundColor;
+      }
     </script>
-</body>
+  </body>
 </html>
